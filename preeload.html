@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preload</title>
+    <link rel="stylesheet" href="preload.css">
+</head>
+
+<body>
+
+
+
+
+    <div class="center">
+        <div class="loader"></div>
+        <span>Loading....</span>
+    </div>
+
+
+
+
+    <script>
+        $(window).on('load', function () {
+            setTimeout(removeLoader, 200);
+            function removeLoader() {
+                $(".loader").fadeOut(200, function () {
+                    $(".loader").remove();
+                });
+            };
+        });
+    </script>
+    <!-- this js for time loading, when set page time -->
+
+    <script>
+        $(window).on('load', function () {
+
+            $(".loader").fadeOut(200, function () {
+                $(".loader").remove();
+            });
+
+        });
+    </script>
+    <!-- this js for website loading, when page first load -->
+
+
+
+
+
+</body>
+
+</html>

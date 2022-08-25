@@ -1,0 +1,126 @@
+<div class="loader-01">
+    <div id="preloader"></div>
+    <style>
+        #preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            background: rgb(252, 252, 252) url('../image/Bounce-Bar-Preloader-1.gif') no-repeat center center;
+        }
+    </style>
+</div>
+<!-- loader-01 -->
+
+
+
+
+<div class="loader-02">
+    <div class="preloader-area">
+        <div class="theme-loader"></div>
+    </div>
+    <style>
+        /*************************************
+******** PRELOADER CSS  **********
+*************************************/
+
+        .preloader-area {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #ffffff;
+            z-index: 999999999999999;
+        }
+
+        .theme-loader {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+            transform-style: preserve-3d;
+            animation: animate 4.59s ease-in-out infinite;
+            z-index: 999;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        .theme-loader:before,
+        .theme-loader:after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            border: 15px solid #000000;
+            border-radius: 50%;
+            position: absolute;
+            animation: animate_1 1.73s ease-in-out infinite both reverse;
+        }
+
+        .theme-loader:after {
+            border-color: #fa0000;
+            animation-delay: -0.86s;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                transform: rotateX(8.75deg) rotateY(35deg);
+            }
+
+            50% {
+                transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+            }
+        }
+
+        @keyframes animate_1 {
+
+            0%,
+            100% {
+                transform: translateZ(25px) rotateX(14deg);
+            }
+
+            33% {
+                transform: translateZ(-25px) scale(0.4);
+            }
+
+            66% {
+                transform: translateZ(-25px);
+            }
+        }
+
+
+        /*************************************
+******** PRELOADER CSS  **********
+*************************************/
+    </style>
+</div>
+
+
+
+<script>
+    $(window).on('load', function () {
+        setTimeout(removeLoader, 200);
+        function removeLoader() {
+            $(".preloader-area").fadeOut(200, function () {
+                $(".preloader-area").remove();
+            });
+        };
+    });
+</script>
+<!-- this js for time loading, when set page time -->
+
+<script>
+    $(window).on('load', function () {
+
+        $(".preloader-area").fadeOut(200, function () {
+            $(".preloader-area").remove();
+        });
+
+    });
+</script>
+<!-- this js for website loading, when page first load -->
